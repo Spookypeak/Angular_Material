@@ -1,0 +1,7 @@
+<mat-chip-list *ngIf="comments">
+    <mat-chip class="m-3" color="primary" selected *ngIf="!isVisible" (click)="toggleComments()" matTooltip="View comments">Comments {{comments.length}}</mat-chip>
+    <mat-chip class="m-3 p-1" color="primary" selected *ngIf="isVisible" (click)="toggleComments()" matTooltip="Close comments"><mat-icon>close</mat-icon></mat-chip>
+</mat-chip-list>
+<mat-accordion *ngIf="isVisible">
+    <app-comment-post [comment]="comment" [user]="getUser(comment.id)" *ngFor="let comment of comments;"></app-comment-post>
+</mat-accordion>

@@ -1,0 +1,25 @@
+<mat-card class="example-card m-2" *ngIf="user">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-chip-list>
+        <mat-chip selected color="warn">
+          @{{user.name}}
+        </mat-chip>
+      </mat-chip-list>
+    </mat-card-title>
+    <mat-card-subtitle>Title: {{post.title}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content style="text-align: justify">
+    <p>
+      {{post.body}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-comment-list [postId]="post.userId"></app-comment-list>
+  </mat-card-actions>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,16 @@
+<mat-expansion-panel class="m-0" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{comment.name}}
+    </mat-panel-title>
+    <mat-panel-description *ngIf="user">
+      <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+      {{user.name}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>
+    
+      <mat-chip>@{{user.username}}</mat-chip>
+    {{comment.body}}
+  </p>
+</mat-expansion-panel>
