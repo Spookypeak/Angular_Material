@@ -6,7 +6,6 @@ import { Component } from "@angular/core";
     styleUrls: ['./profile-nav.component.css']
 })
 export class ProfileNavComponent{
-    state = 'opened';
 
     constructor(){
 
